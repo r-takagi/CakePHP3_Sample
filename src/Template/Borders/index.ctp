@@ -11,6 +11,12 @@
 <hr>
 
 <table>
+<tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>TITLE</th>
+    <th>CONTENT</th>
+</tr>
 <?php foreach ($data as $obj): ?>
     <tr>
         <td><?= $obj->id ?></td>
