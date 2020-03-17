@@ -10,8 +10,8 @@ class BordersController extends AppController {
 
     public function addRecord(){
         if ($this->request->is('post')) {
-            $bord = $this->Borders->newEntity($this->request->data);
-            $this->Bords->save($board);
+            $board = $this->Borders->newEntity($this->request->data);
+            $this->Borders->save($board);
         }
         return $this->redirect(['action' => 'index']);
     }

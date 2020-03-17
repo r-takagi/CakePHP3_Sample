@@ -17,12 +17,14 @@
     <th>TITLE</th>
     <th>CONTENT</th>
 </tr>
-<?php foreach ($data as $obj): ?>
-    <tr>
-        <td><?= $obj->id ?></td>
-        <td><?= h($obj->name) ?></td>
-        <td><?= h($obj->title) ?></td>
-        <td><?= h($obj->content) ?></td>
-    </tr>
-<?php endforeach; ?>
+<?php
+$arr = $data->toArray();
+for ($cnt = 0;$cnt < count($arr);$cnt++) {
+    echo $this->Html->tableCells(
+        $arr[$cnt]->toArray(),
+        ['style'=>'background-color:#f0f0f0'],
+        ['style'=>'font-weight:bold'],
+        true);
+}
+?>
 </table>
